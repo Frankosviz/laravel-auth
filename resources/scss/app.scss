@@ -9,6 +9,61 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
-    color: $text-color;
+
+
+.f-d-header {
+    background-color: rgba(0, 0, 0, 0.274);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    z-index: 3000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.f-d-wrapper {
+    height: 100vh;
+}
+
+.f-d-main {
+    /* flex-grow: 1; soluzione2: collegata al flex-schrink di #sidebar */
+    width: calc(100% - 200px);
+    background-color: $main;
+    padding: 100px 20px 20px 20px;
+    padding-top: 100px;
+    overflow-y: auto;
+    color: white;
+}
+
+.f-d-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: $main;
+}
+
+.f-d-sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: $sidebar;
+    overflow: hidden;
+    /* flex-shrink: 0; soluzione2: collegata al flex grow del main */
+}
+
+.f-d-nav-vertical {
+    padding: 10px;
+    height: calc(100% - 80px);
+    min-height: 0;
+}
+
+.f-d-end-sidebar {
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 10px;
 }

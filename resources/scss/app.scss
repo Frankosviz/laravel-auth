@@ -24,6 +24,14 @@ $fa-font-path: "../fonts/webfonts" !default;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+
+    a {
+        color: $lightbrown;
+    }
+
+    a:hover {
+        color: red;
+    }
 }
 
 .f-d-wrapper {
@@ -34,10 +42,13 @@ $fa-font-path: "../fonts/webfonts" !default;
     /* flex-grow: 1; soluzione2: collegata al flex-schrink di #sidebar */
     width: calc(100% - 200px);
     background-color: $main;
-    padding: 100px 20px 20px 20px;
-    padding-top: 100px;
+    padding-top: 80px;
     overflow-y: auto;
     color: white;
+}
+
+.padding {
+    padding-top: 80px;
 }
 
 .f-d-content {
@@ -52,6 +63,7 @@ $fa-font-path: "../fonts/webfonts" !default;
     height: 100%;
     background-color: $sidebar;
     overflow: hidden;
+    padding: 20px;
     /* flex-shrink: 0; soluzione2: collegata al flex grow del main */
 }
 
@@ -66,4 +78,68 @@ $fa-font-path: "../fonts/webfonts" !default;
     height: 80px;
     width: 100%;
     margin-bottom: 10px;
+}
+
+.f-d-page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, $lightbrown, $green, $darkbrown);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease-in-out infinite, move 2s ease-in-out infinite;
+}
+// Animazione titolo
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+// Animazione titolo
+
+.bounce-title {
+    display: inline-block; /* Necessario per usare transform */
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.f-d-jumbotron {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+// colors
+
+.green {
+    color: $green;
 }

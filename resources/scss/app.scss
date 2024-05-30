@@ -30,7 +30,7 @@ $fa-font-path: "../fonts/webfonts" !default;
     }
 
     a:hover {
-        color: red;
+        color: $green;
     }
 }
 
@@ -138,8 +138,60 @@ $fa-font-path: "../fonts/webfonts" !default;
     background-repeat: no-repeat;
 }
 
+
 // colors
 
 .green {
     color: $green;
+
+    &:hover {
+        color: $lightbrown;
+    }
+}
+
+.gradientColor {
+    background: linear-gradient(90deg, $lightbrown, $green, $darkbrown);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+// table
+
+.f-d-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    background-color: #1C2226;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Stile per le celle della tabella */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid $lightbrown;
+    text-align: left;
+}
+
+/* Stile per l'intestazione della tabella */
+th {
+    background-color: $darkbrown;
+    color: $lightbrown;
+}
+
+/* Stile per le righe della tabella */
+tr:nth-child(even) {
+    background-color: $black;
+}
+
+/* Stile per l'effetto hover sulle righe */
+tr:hover {
+    background-color: $darkbrown;
+    cursor: pointer;
+}
+
+/* Stile per la prima colonna */
+td:first-child {
+    font-weight: bold;
 }

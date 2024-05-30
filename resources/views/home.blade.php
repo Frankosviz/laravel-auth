@@ -28,6 +28,28 @@
         </table>
     </div>
 
+    <h2 class="green fs-4 fw-bold text-center text-uppercase">From the community</h2>
+    <div class="w-100 d-flex justify-content-between ">
+        <div class="f-d-firstFavProject">
+            <a class="f-d-card-layer text-decoration-none" href="#">
+                <!-- Qui andrà la rotta della show -->
+                {{ $project->title }}
+            </a>
+        </div>
+        <div class="f-d-secondFavProject">
+            <a class="text-decoration-none f-d-card-layer" href="#">
+                <!-- Qui andrà la rotta della show -->
+                {{ $project->title }}
+            </a>
+        </div>
+        <div class="f-d-thirdFavProject">
+            <a class="text-decoration-none f-d-card-layer" href="#">
+                <!-- Qui andrà la rotta della show -->
+                {{ $project->title }}
+            </a>
+        </div>
+    </div>
+
 
 </section>
 @endsection
@@ -49,5 +71,5 @@
         @endforeach
     </table>
 </div>
-<h2></h2>
+
 @endsection

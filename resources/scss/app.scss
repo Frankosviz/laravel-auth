@@ -195,3 +195,67 @@ tr:hover {
 td:first-child {
     font-weight: bold;
 }
+
+// card
+
+// .f-d-card {
+//     width: 500px;
+//     height: 300px;
+//     background-color: $darkbrown;
+//     border-radius: 10px;
+//     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+//     padding: ;
+// }
+
+.f-d-firstFavProject {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/firstimg.jpg);
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.f-d-secondFavProject {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/secondimg.jpg);
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.f-d-thirdFavProject {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/thirdimg.jpg);
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.f-d-card-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+}

@@ -35,9 +35,14 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show($slug)
     {
-        //
+        // Possibile soluzione passando lo $slug alla funzione show
+        $project = Project::where('slug', $slug)->first();
+        // dd($project);
+
+        return view('admin.projects.show', compact('project'));
+
     }
 
     /**

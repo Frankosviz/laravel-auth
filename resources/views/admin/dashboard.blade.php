@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section('title')
+    <h1 class="green text-uppercase">Good Morning, <strong class="gradientColor">{{ Auth::user()->name }}</strong></h1>
+@endsection
+
 @section('content')
 <section class="text-center">
 </section>
@@ -11,6 +16,7 @@
                     <th class="text-center fw-bold gradientColor fs-4">Repo-Url</th>
                     <th class="text-center fw-bold gradientColor fs-4">Start-Date</th>
                     <th class="text-center fw-bold gradientColor fs-4">Status</th>
+                    <th class="text-center fw-bold gradientColor fs-4">Actions</th>
 
                 </tr>
                 @foreach ($projects as $project)

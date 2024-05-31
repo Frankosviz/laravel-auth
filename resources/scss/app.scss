@@ -354,6 +354,11 @@ td:first-child {
     padding: 10px;
 }
 
+.f-d-transparent-layer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: lightgray;
+}
+
 // fontawesome searchbar
 
 #search-bar {
@@ -393,3 +398,14 @@ td:first-child {
     background: #555; /* Colore del pollice della scrollbar quando si passa sopra con il mouse */
 }
 
+
+.f-d-img {
+    width: 100%;
+    height: 40%;
+}
+
+.f-d-img-small {
+    width: 150px;
+    height: 150px;
+
+}

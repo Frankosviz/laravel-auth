@@ -26,8 +26,7 @@
         <div class="f-d-content">
             <div class="f-d-header">
                 <!-- Left Side Of Navbar -->
-                
-                <h1 class="green text-uppercase">Good Morning, <strong class="gradientColor">{{ Auth::user()->name }}</strong></h1>
+                 @yield('title')
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav d-flex flex-row gap-3">
@@ -87,7 +86,7 @@
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="f-d-nav-vertical">
+                <div>
                     @yield('sidebarContent')
                 </div>
             </div>

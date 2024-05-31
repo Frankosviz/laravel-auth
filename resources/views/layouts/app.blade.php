@@ -27,7 +27,7 @@
             <div class="f-d-header">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto text-center">
-                
+                    @yield('title')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -88,7 +88,7 @@
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="f-d-nav-vertical">
+                <div>
                     @yield('sidebarContent')
                 </div>
             </div>

@@ -22,7 +22,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('projects', ProjectController::class);
+
+    // In questo caso gli passo come parametri lo slug perchè sto prendendo i dati tramite slug e non tramite id come facciamo normalmente
+    Route::resource('projects', ProjectController::class)->parameters([
+        'projects' => 'project:slug'
+    ]);
 });
 
 

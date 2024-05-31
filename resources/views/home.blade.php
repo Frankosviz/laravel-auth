@@ -1,10 +1,9 @@
 @extends('layouts.app')
+@section('title')
+    
+@endsection
 @section('content')
 <section class="text-center">
-    <h1 class="green text-uppercase gradientColor">Boolhub Projects</h1>
-    <div class="f-d-jumbotron">
-
-    </div>
 </section>
 <section>
     <div class="d-flex justify-content-between align-items-center">

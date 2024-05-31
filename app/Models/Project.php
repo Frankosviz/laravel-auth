@@ -25,7 +25,13 @@ class Project extends Model
 
     public static function generateSlug($title)
     {
-        return Str::slug($title, '-');
+        $slug = Str::slug($title, '-');
+        $count = 1;
+        while (Project::where('slug', $slug)->first()) {
+            $slug = Str::of($title)->slug('-') . "-{$count}";
+            $count++;
+        }
+        return $slug;
     }
 
 }

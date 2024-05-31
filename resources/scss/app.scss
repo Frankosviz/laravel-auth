@@ -12,7 +12,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 
 .f-d-header {
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 80px;
     position: fixed;
     top: 0;
@@ -27,6 +27,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 
     a {
         color: $lightbrown;
+        font-size: 20px;
     }
 
     a:hover {
@@ -34,14 +35,20 @@ $fa-font-path: "../fonts/webfonts" !default;
     }
 }
 
-.f-d-wrapper {
-    height: 100vh;
+.f-d-li-unique {
+    color: $lightbrown;
+    font-size: 20px;
 }
+
+
 
 .f-d-main {
     /* flex-grow: 1; soluzione2: collegata al flex-schrink di #sidebar */
     width: calc(100% - 200px);
+    height: 100vh;
     background-color: $main;
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
     padding-top: 80px;
     overflow-y: auto;
     color: white;
@@ -60,7 +67,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 .f-d-sidebar {
     width: 200px;
-    height: 100%;
+    height: 100vh;
     background-color: $sidebar;
     overflow: hidden;
     padding: 20px;
@@ -68,9 +75,28 @@ $fa-font-path: "../fonts/webfonts" !default;
 }
 
 .f-d-nav-vertical {
-    padding: 10px;
-    height: calc(100% - 80px);
-    min-height: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $green;
+        padding: 10px;
+
+        &:hover {
+            color: $lightbrown;
+        }
+    }
+    i {
+        color: $lightbrown;
+        cursor: pointer;
+        padding-right: 10px;
+    }
 }
 
 .f-d-end-sidebar {
@@ -129,14 +155,14 @@ $fa-font-path: "../fonts/webfonts" !default;
     }
 }
 
-.f-d-jumbotron {
-    width: 100%;
-    height: 400px;
-    background-image: url(../images/jumbotron.jpg);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-}
+// .f-d-jumbotron {
+//     width: 100%;
+//     height: 400px;
+//     background-image: url(../images/jumbotron.jpg);
+//     background-size: cover;
+//     background-position: top;
+//     background-repeat: no-repeat;
+// }
 
 
 // colors
@@ -160,7 +186,6 @@ $fa-font-path: "../fonts/webfonts" !default;
 .f-d-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 1em;
     font-family: Arial, sans-serif;
     background-color: #1C2226;
@@ -259,3 +284,33 @@ td:first-child {
     align-items: center;
     color: lightgray;
 }
+
+.f-d-main-first-container {
+    width: 70%;
+}
+
+.f-d-main-second-container {
+    width: 30%;
+}
+
+// fontawesome searchbar
+
+#search-bar {
+    display: none;
+    position: absolute;
+    right: 30px;
+    padding: 5px;
+    border: 2px solid $lightbrown;
+    background-color: #1C2226;
+    color: $green;
+    font-weight: bold;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+

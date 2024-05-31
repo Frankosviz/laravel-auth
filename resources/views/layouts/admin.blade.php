@@ -26,9 +26,8 @@
         <div class="f-d-content">
             <div class="f-d-header">
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav me-auto text-center">
-
-                </ul>
+                
+                <h1 class="green text-uppercase">Good Morning, <strong class="gradientColor">{{ Auth::user()->name }}</strong></h1>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav d-flex flex-row gap-3">

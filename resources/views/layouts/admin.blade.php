@@ -36,7 +36,7 @@
                         <input type="text" id="search-bar" placeholder="Search...">
                     </li>
                     <li class="nav-item text-center">
-                        <a class="nav-link" href="{{url('/') }}"><i class="fa-solid fa-house"></i>
+                        <a class="nav-link" href="{{url('/admin.dashboard') }}"><i class="fa-solid fa-house"></i>
                         </a>
                     </li>
                     <!-- Authentication Links -->
@@ -75,7 +75,7 @@
                 </ul>
             </div>
             <div class="f-d-sidebar">
-                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex align-items-center" href="{{ url('/admin.dashboard') }}">
                     <div class="f-d-page-title">
                         Projects
                     </div>

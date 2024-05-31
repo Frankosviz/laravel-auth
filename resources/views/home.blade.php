@@ -13,17 +13,12 @@
                 <tr>
                     <th class="text-center fw-bold gradientColor fs-4">Title</th>
                     <th class="text-center fw-bold gradientColor fs-4">Repo-Url</th>
-                    <th class="text-center fw-bold gradientColor fs-4">Start-Date</th>
-                    <th class="text-center fw-bold gradientColor fs-4">Status</th>
 
                 </tr>
                 @foreach ($projects as $project)
                     <tr>
                         <td class="green">{{ $project->title }}</td>
                         <td class="green">{{ $project->repository_url }}</td>
-                        <td class="green">{{ $project->start_date }}</td>
-                        <td class="green">{{ $project->status }}</td>
-
                     </tr>
                 @endforeach
             </table>

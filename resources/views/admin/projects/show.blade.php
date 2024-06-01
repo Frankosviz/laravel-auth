@@ -37,9 +37,20 @@
         <p class="lightbrown fs-4 fw-bold">
             Url of the project
         </p>
-        <p class="green fw-bold">
-            {{ $project->url }}
-        </p>
+        <div class="d-flex bd-highlight mb-3">
+            <p class="green fw-bold me-auto p-2 bd-highlight">
+                {{ $project->url }}
+            </p>
+            <div class="p-2 bd-highlight">
+                <button class="f-d-button "><a
+                        href="{{ route('admin.projects.edit', $project->slug) }}">Edit</a></button>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button class="f-d-button"><a
+                        href="{{ route('admin.projects.destroy', $project->slug) }}">Delete</a></button>
+            </div>
+
+        </div>
     </div>
     <div class="f-d-main-second-container f-d-transparent-layer">
         <p class="lightbrown fs-4 fw-bold">
@@ -48,23 +59,22 @@
         <p class="green">
             <img class="f-d-img" src="{{ $project->image_path }}" alt="Project Image">
         </p>
+        <p class="text-center">
+            <em class="green">Designed by <strong class="gradientColor fs-4">{{ Auth::user()->name }}</strong></em>
+        </p>
     </div>
 </div>
-<div class="w-100 f-d-transparent-layer">
+<!-- <div class="w-100 f-d-transparent-layer">
     <p class="lightbrown fs-4 fw-bold">
         Related Projects
     </p>
 </div>
 <div class="w-100 f-d-transparent-layer d-flex gap-4 align-items-center">
-
-    @for ($i = 0; $i < 5; $i++)
         <div class="d-flex">
             <a href="{{ route('admin.projects.show', $project->slug) }}"><img class="f-d-img-small"
                     src="{{ $project->image_path }}" alt="imgfirst"></a>
         </div>
-    @endfor
-
-</div>
+</div>  -->
 @endsection
 
 @section('sidebarContent')

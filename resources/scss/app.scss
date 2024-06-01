@@ -202,7 +202,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 // table
 
 .f-d-table {
-    width: 100%;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+
     border-collapse: collapse;
     font-size: 1em;
     font-family: Arial, sans-serif;
@@ -346,11 +349,13 @@ td:first-child {
 
 .f-d-main-first-container {
     width: calc(70% - 20px);
+    margin: 10px;
     padding: 10px;
 }
 
 .f-d-main-second-container {
     width: calc(30% - 20px);
+    margin: 10px;
     padding: 10px;
 }
 
@@ -407,5 +412,4 @@ td:first-child {
 .f-d-img-small {
     width: 150px;
     height: 150px;
-
 }

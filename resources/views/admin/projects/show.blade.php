@@ -42,12 +42,22 @@
                 {{ $project->url }}
             </p>
             <div class="p-2 bd-highlight">
-                <button class="f-d-button "><a
-                        href="{{ route('admin.projects.edit', $project->slug) }}">Edit</a></button>
+                <a href="{{ route('admin.projects.edit', $project) }}" class="">
+                    <button type="submit" class="f-d-button">
+                        <i class="fa-solid fa-pen">
+                        </i>
+                    </button>
+                </a>
             </div>
             <div class="p-2 bd-highlight">
-                <button class="f-d-button"><a
-                        href="{{ route('admin.projects.destroy', $project->slug) }}">Delete</a></button>
+                <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="f-d-button">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+
             </div>
 
         </div>
@@ -83,15 +93,15 @@
         <p class="green fs-4 fw-bold">
             User
         </p>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('home') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-chart-line"></i>
-            Profile
+            Home
         </a>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('admin.dashboard') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-sliders"></i>
             Dashboard
         </a>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('admin.dashboard') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-list-check"></i>
             Projects
         </a>

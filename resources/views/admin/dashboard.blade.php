@@ -16,8 +16,9 @@
                     <th class="text-center fw-bold gradientColor fs-4">Repo-Url</th>
                     <th class="text-center fw-bold gradientColor fs-4">Start-Date</th>
                     <th class="text-center fw-bold gradientColor fs-4">Status</th>
-                    <th class="text-center fw-bold gradientColor fs-4">Actions</th>
-
+                    <th class="text-center fw-bold gradientColor fs-4">Detail</th>
+                    <th class="text-center fw-bold gradientColor fs-4"><a class="f-d-button" href="{{ route('admin.projects.create') }}"><i class="fa-solid fa-plus"></i></th></a>
+                    
                 </tr>
                 @foreach ($projects as $project)
                     <tr>
@@ -29,13 +30,6 @@
                             <a href="{{ route('admin.projects.show', $project) }}" class="f-d-button">
                                 <i class="fa-solid fa-eye">
                                 </i>
-                            </a>
-                            <a href="{{ route('admin.projects.edit', $project) }}" class="f-d-button">
-                                <i class="fa-solid fa-pen">
-                                </i>
-                            </a>
-                            <a href="{{ route('admin.projects.destroy', $project) }}" class="f-d-button">
-                                <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
                     </tr>
@@ -57,15 +51,15 @@
         <p class="green fs-4 fw-bold">
             User
         </p>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('home') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-chart-line"></i>
-            Profile
+            Home
         </a>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('admin.dashboard') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-sliders"></i>
             Dashboard
         </a>
-        <a href="#" class="d-flex justify-content-start align-items-center">
+        <a href="{{ route('admin.dashboard') }}" class="d-flex justify-content-start align-items-center">
             <i class="fs-5 fa-solid fa-list-check"></i>
             Projects
         </a>

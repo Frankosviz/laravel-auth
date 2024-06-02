@@ -40,6 +40,10 @@ $fa-font-path: "../fonts/webfonts" !default;
     font-size: 20px;
 }
 
+.f-d-edit-height {
+    height: 100vh;
+}
+
 
 
 .f-d-main {
@@ -337,6 +341,75 @@ td:first-child {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+.f-d-button-form {
+    background-color: $green;
+    border: none;
+    color: #1C2226;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.f-d-button-form-cancel {
+    background-color: #1C2226;
+    border: none;
+    color: $green;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.f-d-button-form:hover {
+    background-color: $lightbrown;
+
+}
+
+.f-d-button-form:active {
+    animation: pulse 0.5s;
+}
+
+.f-d-button-form-cancel:hover {
+    background-color: $lightbrown;
+}
+
+.f-d-button-form-cancel:active {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .f-d-card-layer {
     width: 100%;
     height: 100%;
@@ -348,20 +421,30 @@ td:first-child {
 }
 
 .f-d-main-first-container {
-    width: calc(70% - 20px);
+    width: calc(100% - 20px);
     margin: 10px;
     padding: 10px;
 }
 
-.f-d-main-second-container {
-    width: calc(30% - 20px);
-    margin: 10px;
-    padding: 10px;
+// .f-d-main-second-container {
+//     width: calc(30% - 20px);
+//     margin: 10px;
+//     padding: 10px;
+// }
+
+.f-d-editform-container {
+    width: calc(100% - 20px);
+    padding: 20px;
 }
 
 .f-d-transparent-layer {
     background-color: rgba(0, 0, 0, 0.8);
-    color: lightgray;
+    width: 100%;
+}
+
+.f-d-transparent-layer-edit {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
 }
 
 // fontawesome searchbar
@@ -377,7 +460,16 @@ td:first-child {
     font-weight: bold;
     border-radius: 3px;
     outline: none;
+}
 
+.f-d-bg-form {
+    padding: 5px;
+    border: 2px solid $lightbrown;
+    background-color: #1C2226;
+    color: $green;
+    font-weight: bold;
+    border-radius: 3px;
+    outline: none;
 }
 
 .search-container {

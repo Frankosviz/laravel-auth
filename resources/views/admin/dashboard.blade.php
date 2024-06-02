@@ -9,7 +9,7 @@
 </section>
 <section>
     <div class="d-flex justify-content-between align-items-center">
-        <div class="f-d-main-first-container">
+        <div class="w-100">
             <table class="f-d-table">
                 <tr>
                     <th class="text-center fw-bold gradientColor fs-4">Title</th>
@@ -32,12 +32,12 @@
                                 </i>
                             </a>
                         </td>
+                        <td>
+                            
+                        </td>
                     </tr>
                 @endforeach
             </table>
-        </div>
-        <div class="f-d-main-second-container">
-
         </div>
     </div>
 

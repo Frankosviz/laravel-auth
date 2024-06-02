@@ -66,9 +66,9 @@
         <p class="lightbrown fs-4 fw-bold">
             Image of the project
         </p>
-        <p class="green">
+        <div class="w-100">
             <img class="f-d-img" src="{{ $project->image_path }}" alt="Project Image">
-        </p>
+        </div>
         <p class="text-center">
             <em class="green">Designed by <strong class="gradientColor fs-4">{{ Auth::user()->name }}</strong></em>
         </p>

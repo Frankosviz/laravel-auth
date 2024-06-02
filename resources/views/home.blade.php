@@ -7,9 +7,9 @@
 </section>
 <section>
     <div class="d-flex justify-content-between align-items-center">
-        <div class="f-d-main-first-container">
-            <div class="w-100 f-d-transparent-layer text-center">
-                <h1 class="green text-uppercase">Top Projects</h1>
+        <div class="w-100">
+            <div class="w-100 f-d-transparent-layer text-center mt-3">
+                <h1 class="gradientColor text-uppercase">Top Frankosviz public Projects</h1>
             </div>
             <table class="f-d-table">
                 <tr>

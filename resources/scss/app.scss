@@ -421,16 +421,18 @@ td:first-child {
 }
 
 .f-d-main-first-container {
-    width: calc(100% - 20px);
+    width: calc(70% - 20px);
+    height: calc(100vh - 300px);
     margin: 10px;
     padding: 10px;
 }
 
-// .f-d-main-second-container {
-//     width: calc(30% - 20px);
-//     margin: 10px;
-//     padding: 10px;
-// }
+.f-d-main-second-container {
+    width: calc(30% - 20px);
+    height: calc(100vh - 300px);
+    margin: 10px;
+    padding: 10px;
+}
 
 .f-d-editform-container {
     width: calc(100% - 20px);
@@ -498,7 +500,7 @@ td:first-child {
 
 .f-d-img {
     width: 100%;
-    height: 40%;
+    height: 550px;
 }
 
 .f-d-img-small {

@@ -29,6 +29,7 @@
         </div>
 
         <div class="mb-3">
+            <img src="/images/placeholder.webp" width="100" id="uploadPreview">
             <label for="image_path" class="form-label lightbrown fw-bold">Image Path</label>
             <div class="input-group">
                 <input type="file" accept="image/*" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror"

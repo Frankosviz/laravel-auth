@@ -13,3 +13,10 @@ document.getElementById('search-icon').addEventListener('click', function() {
         searchBar.style.display = 'none';
     }
 });
+
+const image = document.getElementById('upload_image');
+if (image) {
+    image.addEventListener('change', () => {
+        const preview = document.getElementById('uploadPreview');
+    });
+}

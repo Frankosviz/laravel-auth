@@ -20,7 +20,7 @@
     <div class="mb-3">
         <label for="image_path" class="form-label lightbrown fw-bold">Image Path</label>
         <div class="input-group">
-            <input type="text" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror" name="image_path" value="{{old('image_path', $project->image_path)}}" aria-describedby="basic-addon3 basic-addon4">
+            <input type="file" accept="image/*" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror" name="image_path" value="{{old('image_path', $project->image_path)}}" aria-describedby="basic-addon3 basic-addon4">
         </div>
     </div>
 

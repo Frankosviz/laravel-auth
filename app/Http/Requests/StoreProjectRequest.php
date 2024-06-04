@@ -29,9 +29,9 @@ class StoreProjectRequest extends FormRequest
             'end_date' => 'nullable|date|after:start_date',
             'url' => 'nullable|url',
             'repository_url' => 'nullable|url',
-            'image_path' => 'nullable|url',
+            'image_path' => 'nullable',
             'status' => 'required',
-            'slug' => 'nullable'
+            // 'slug' => 'nullable'
         ];
     }
     public function messages(){

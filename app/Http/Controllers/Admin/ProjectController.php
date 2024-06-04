@@ -7,6 +7,8 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Http\Requests\StoreProjectRequest;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -33,6 +35,21 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $form_data = $request->validated();
+        $form_data['slug'] = Project::generateSlug($form_data['title']);
+
+        if ($request->hasFile('image_path')){
+            // $img_path = $request->file('image_path')->storeAs(
+            //     'project_image',
+            //     'f-d-image.png'
+            // )
+            $img _path = Storage::put('project_image', $request->image_path);
+            // $form_data['image'] = $path;
+            $form_data['image_path'] = $img_path;
+        }
+        //dd($img_path);
+        
+
+
         $new_project = Project::create($form_data);
         return redirect()->route('admin.dashboard', $new_project->slug)->with('success', 'Project created successfully');
     }
@@ -63,8 +80,20 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+        $form_data= $request->all();
+        if ($project->title !== $form_data['title']) {
+            $form_data['slug'] = Project::generateSlug($form_data['title']);     
+        }
         $form_data = $request->validated();
         $project->update($form_data);
+
+        // Con questa funzione andiamo a verificare l'ultima query eseguita, 
+        // ricordarsi di aggiungere use Illuminate\Support\Facades\DB; sopra.
+        
+        // DB::enableQueryLog();
+        // $project->update($form_data);
+        // $query = DB::getQueryLog();
+        // dd($query);
 
         return redirect()->route('admin.projects.show', $project->slug);
     }

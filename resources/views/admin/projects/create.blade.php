@@ -14,7 +14,7 @@
         </div>
     @endif
 </div>
-<form action="{{ route('admin.projects.store', $project->slug) }}" method="POST" enctype="multipart/form-data">
+<form class="h-100" action="{{ route('admin.projects.store', $project->slug) }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="f-d-editform-container f-d-transparent-layer-edit">
         @error('title', 'description', 'image_path', 'repository_url', 'url', 'technologies_used', 'start_date', 'end_date', 'status')
@@ -31,8 +31,8 @@
         <div class="mb-3">
             <label for="image_path" class="form-label lightbrown fw-bold">Image Path</label>
             <div class="input-group">
-                <input type="text" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror"
-                    name="image_path" aria-describedby="basic-addon3 basic-addon4">
+                <input type="file" accept="image/*" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror"
+                    name="image_path" id="upload_image" aria-describedby="basic-addon3 basic-addon4">
             </div>
         </div>
 
@@ -41,14 +41,6 @@
             <div class="input-group">
                 <input type="text" class="form-control f-d-bg-form @error('repository_url') is-invalid @enderror"
                     name="repository_url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label for="slug" class="form-label lightbrown fw-bold">Slug must be writed in the correct mode ( giovanni-va-in-bici-nel-bosco )</label>
-            <div class="input-group">
-                <input type="text" class="form-control f-d-bg-form @error('slug') is-invalid @enderror"
-                    name="slug" aria-describedby="basic-addon3 basic-addon4">
             </div>
         </div>
 

@@ -18,9 +18,16 @@
     </div>
 
     <div class="mb-3">
-        <label for="image_path" class="form-label lightbrown fw-bold">Image Path</label>
+        <div class="media">
+            @if ($project->image_path)
+            <img class="shadow" width="150" src="{{ asset('storage/' . $project->image_path)}}" id="uploadPreview" alt="{{ $project->title}}">
+            @else 
+            <img class="shadow" width="150" src="{{"images/placeholder.webp"}}" id="uploadPreview" alt="{{ $project->title}}">
+            @endif
+        </div>
+        <label for="image_path" class="form-label lightbrown fw-bold">Image</label>
         <div class="input-group">
-            <input type="file" accept="image/*" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror" name="image_path" value="{{old('image_path', $project->image_path)}}" aria-describedby="basic-addon3 basic-addon4">
+            <input type="file" accept="image/*" id="upload_image" class="form-control f-d-bg-form @error('image_path') is-invalid @enderror" name="image_path" value="{{old('image_path', $project->image_path)}}" aria-describedby="basic-addon3 basic-addon4">
         </div>
     </div>
 
